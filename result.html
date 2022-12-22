@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+   <style>
+    {
+
+ box-sizing: border-box;
+}
+
+body {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 700px;
+ width: 100%;
+ background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2018_39/2582131/180928-differing-personality-mc-1541.JPG');
+ background-repeat:no-repeat;
+  background-size: cover;
+
+}
+fieldset {
+<!--          border:0.5px solid black;-->
+         margin: 20px;
+         background-color: white;
+         opacity: 0.8;
+        }
+h1 {
+ color: #333;
+ font-family: tahoma;
+ font-size: 3rem;
+ font-weight: 100;
+ line-height: 1.5;
+ text-transform: uppercase;
+ white-space: nowrap;
+ overflow: hidden;
+ position: relative;
+ width: 550px;
+}
+
+h1 span {
+ font-size: 40px;
+<!--  margin-left: 20px;-->
+ width: 1000px;
+}
+
+.message {
+ background-color: yellow;
+ color: #333;
+<!--  display: block;-->
+ font-weight: 900;
+ overflow: hidden;
+<!--  position: absolute;-->
+<!--  padding-left: 0.5rem;-->
+ top: 100px;
+ left: 270px;
+ animation: openclose 5s ease-in-out infinite;
+}
+.word1{
+ font-family: tahoma;
+}
+
+@keyframes openclose {
+ 98% {
+   top: -9rem;
+   width: 0;
+   text-indent: 5px;
+ }
+ 100% {
+   top: 0;
+   width: 0;
+   text-indent: 0;
+ }
+}
+
+<!--    h1 {text-align: center;-->
+<!--    margin-top: 270px;-->
+<!--    color: blue;-->
+<!--    font-family: verdana;-->
+<!--    font-size: 300%;-->
+
+
+</style>
+
+   <title>Personality</title>
+</head>
+<body>
+<fieldset>
+<h1>
+ <span>Predicted personality is:</span>
+ <div class="message">
+   <div class="word1">{{prediction}}</div>
+ </div>
+</h1></fieldset>
+<!--    <div>-->
+<!--        <h1> <span>{{ 'Your personality is predicted as:' + prediction }}</span></h1>-->
+<!--    </div>-->
+
+
+</body>
+</html>
