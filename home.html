@@ -1,0 +1,239 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<html>
+<head>
+   <style>
+         body {
+         font-family: 'Anaheim';
+         font-size: 1.2em;
+         background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2018_39/2582131/180928-differing-personality-mc-1541.JPG");
+       }
+
+
+
+       #outside {
+<!--          background-color: lightgoldenrodyellow;-->
+         padding-top: 25px;
+         padding-bottom: 25px;
+
+       }
+
+       h1 {
+         font-size:50px ;
+         text-align: center;
+         text-transform: capitalize;
+       }
+        form {
+
+         margin: 0 auto;
+         width: 70%;
+         padding: 1em;
+         border: 1px solid #CCC;
+         border-radius: 1em;
+
+       }
+       p{
+           font-size: 20px;
+       }
+       #survey-form {
+         background-color: white;
+         opacity: 0.94;
+       }
+
+       fieldset {
+         border:1.5px solid black;
+         margin: 12px;
+        }
+
+       legend {
+         font-weight: 700;
+         font-size: 30px
+       }
+
+       #number {
+         width: 200px;
+       }
+
+
+       div + div {
+         margin-top: 1em;
+         }
+
+
+
+       input, textarea {
+         width: 200px;
+         border: 2px solid #999;
+       }
+
+       input:focus, textarea:focus {
+         border-color: OrangeRed;
+       }
+
+       textarea {
+         vertical-align: top;
+         height: 5em;
+         resize: vertical;
+       }
+
+       .button {
+       }
+
+       button {
+         margin: 1em;
+         font-size: 1.5em;
+         text-transform: capitalize;
+         background-color: #4d8b5a;
+         color: white;
+         border: none;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         border-radius: 12px;
+
+       }
+
+       #submitbutton {
+         display: flex;
+         justify-content: center;
+       }
+       }
+   </style>
+   <link rel="stylesheet" href="pers_css.css">
+</head>
+<div id="outside">
+<form id="survey-form" action="/result" method="post">
+ <h1 id="title">Personality Prediction Quiz </h1>
+ <p id="description"><b>Note:</b> Select the degree of agreeableness with the questions, 1 - not so much and 8 - very much</p>
+
+ <fieldset>
+   <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+   <legend>Personal Details</legend>
+   <!-- formally describes the purpose of the fieldset it is included inside. -->
+<!--    <div>-->
+<!--&lt;!&ndash;      <label id="name-label" for="name">Name:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text" required id="name" name="user_name" placeholder="Enter name here">&ndash;&gt;-->
+<!--        </div>-->
+
+   <!-- ------------------checkbox Buttons-------------------------------- -->
+   <div>
+     <div>
+     <label for="question">Gender (Female=0, Male=1)</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 0 &nbsp;
+
+     </p>
+   </div>
+   </div>
+ </fieldset>
+<fieldset>
+   <legend>Your Age</legend>
+       <div>
+
+<!--      <label for="question">Your Age </label>-->
+     <p>
+         <input type="checkbox" name="option" value="1"> 17 &nbsp;
+       <input type="checkbox" name="option" value="2"> 18 &nbsp;
+       <input type="checkbox" name="option" value="3"> 19 &nbsp;
+       <input type="checkbox" name="option" value="4"> 20
+       <input type="checkbox" name="option" value="1"> 21 &nbsp;
+       <input type="checkbox" name="option" value="2"> 22 &nbsp;
+       <input type="checkbox" name="option" value="3"> 23 &nbsp;
+       <input type="checkbox" name="option" value="4"> 24 &nbsp;
+       <input type="checkbox" name="option" value="5"> 25 &nbsp;
+       <input type="checkbox" name="option" value="6"> 26 &nbsp;
+       <input type="checkbox" name="option" value="7"> 27 &nbsp;
+       <input type="checkbox" name="option" value="8"> 28
+     </p>
+   </div>
+ </fieldset>
+
+ <fieldset>
+   <legend>Question 1</legend>
+  <div>
+     <label for="question">Rate your Openness (inventive/curious vs. consistent/cautious)...</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 2 &nbsp;
+       <input type="checkbox" name="option" value="3"> 3 &nbsp;
+       <input type="checkbox" name="option" value="4"> 4 &nbsp;
+       <input type="checkbox" name="option" value="5"> 5 &nbsp;
+       <input type="checkbox" name="option" value="6"> 6 &nbsp;
+       <input type="checkbox" name="option" value="7"> 7 &nbsp;
+       <input type="checkbox" name="option" value="8"> 8
+     </p>
+   </div>
+ </fieldset>
+     <fieldset>
+   <legend>Question 2</legend>
+  <div>
+     <label for="question">Rate your Neuroticism (friendly/compassionate vs. challenging/detached)...</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 2 &nbsp;
+       <input type="checkbox" name="option" value="3"> 3 &nbsp;
+       <input type="checkbox" name="option" value="4"> 4 &nbsp;
+       <input type="checkbox" name="option" value="5"> 5 &nbsp;
+       <input type="checkbox" name="option" value="6"> 6 &nbsp;
+       <input type="checkbox" name="option" value="7"> 7 &nbsp;
+       <input type="checkbox" name="option" value="8"> 8
+     </p>
+   </div>
+ </fieldset>
+     <fieldset>
+   <legend>Question 3</legend>
+  <div>
+     <label for="question">Rate your Conscientiousness (efficient/organized vs. easy-going/careless)...</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 2 &nbsp;
+       <input type="checkbox" name="option" value="3"> 3 &nbsp;
+       <input type="checkbox" name="option" value="4"> 4 &nbsp;
+       <input type="checkbox" name="option" value="5"> 5 &nbsp;
+       <input type="checkbox" name="option" value="6"> 6 &nbsp;
+       <input type="checkbox" name="option" value="7"> 7 &nbsp;
+       <input type="checkbox" name="option" value="8"> 8
+     </p>
+   </div>
+ </fieldset>
+     <fieldset>
+   <legend>Question 4</legend>
+  <div>
+     <label for="question">Rate your Agreeableness (fri=endly/compassionate vs. challenging/detached)...</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 2 &nbsp;
+       <input type="checkbox" name="option" value="3"> 3 &nbsp;
+       <input type="checkbox" name="option" value="4"> 4 &nbsp;
+       <input type="checkbox" name="option" value="5"> 5 &nbsp;
+       <input type="checkbox" name="option" value="6"> 6 &nbsp;
+       <input type="checkbox" name="option" value="7"> 7 &nbsp;
+       <input type="checkbox" name="option" value="8"> 8
+     </p>
+   </div>
+ </fieldset>
+     <fieldset>
+   <legend>Question 5</legend>
+  <div>
+     <label for="question">Rate your Extroversion (outgoing/energetic vs. solitary/reserved)...</label>
+     <p>
+       <input type="checkbox" name="option" value="1"> 1 &nbsp;
+       <input type="checkbox" name="option" value="2"> 2 &nbsp;
+       <input type="checkbox" name="option" value="3"> 3 &nbsp;
+       <input type="checkbox" name="option" value="4"> 4 &nbsp;
+       <input type="checkbox" name="option" value="5"> 5 &nbsp;
+       <input type="checkbox" name="option" value="6"> 6 &nbsp;
+       <input type="checkbox" name="option" value="7"> 7 &nbsp;
+       <input type="checkbox" name="option" value="8"> 8
+     </p>
+   </div>
+ </fieldset>
+
+
+ <div id="submitbutton">
+   <button type="submit" id="submit">Submit</button>   </div>
+
+</form>
+ </div>
+</html>
